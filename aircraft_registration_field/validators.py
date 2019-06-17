@@ -8,7 +8,7 @@ from aircraft_registration.registration import RegistrationNumber
 logger = logging.getLogger(__name__)
 
 
-def validate_radio_call_sign(value):
+def validate_aircraft_registration_number(value):
     reg_num = RegistrationNumber(value)
     if not reg_num.is_valid():
         logger.debug("invalid value : %s does not match %s",

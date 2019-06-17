@@ -4,7 +4,7 @@ from django_countries.fields import Country
 from .data import COUNTRIES_PREFIX
 
 
-class CallSignPrefixSelect(Select):
+class AircraftRegistrationPrefixSelect(Select):
     initial = None
 
     def __init__(self, initial=None):
@@ -19,11 +19,11 @@ class CallSignPrefixSelect(Select):
         )
 
 
-class CallSingPrefixWidget(MultiWidget):
+class AircraftRegistrationPrefixWidget(MultiWidget):
 
     def __init__(self, attrs=None, initial=None):
         widgets = (
-            CallSignPrefixSelect(initial),
+            AircraftRegistrationPrefixSelect(initial),
             TextInput(attrs=attrs)
         )
         super().__init__(widgets, attrs)

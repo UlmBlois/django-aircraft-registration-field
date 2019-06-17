@@ -5,16 +5,16 @@ from django.utils.translation import ugettext_lazy as _
 
 import logging
 
-from aircraft_registration_field.validators import validate_radio_call_sign
-from aircraft_registration_field.widgets import CallSingPrefixWidget
+from aircraft_registration_field.validators import validate_aircraft_registration_number
+from aircraft_registration_field.widgets import AircraftRegistrationPrefixWidget
 
 logger = logging.getLogger(__name__)
 
 
-class CallSignField(CharField):
+class AircraftRegistrationField(CharField):
     default_error_messages = {"invalid": _("Enter a valid radio call sign.")}
-    default_validators = [validate_radio_call_sign]
-    widget = CallSingPrefixWidget
+    default_validators = [validate_aircraft_registration_number]
+    widget = AircraftRegistrationPrefixWidget
 
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
@@ -27,4 +27,4 @@ class CallSignField(CharField):
 
     def validate(self, value):
         super().validate(value)
-        validate_radio_call_sign(value)
+        validate_aircraft_registration_number(value)
