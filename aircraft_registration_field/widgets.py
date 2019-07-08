@@ -42,4 +42,5 @@ class AircraftRegistrationPrefixWidget(MultiWidget):
     def value_from_datadict(self, data, files, name):
         parts = [widget.value_from_datadict(data, files, name + '_%s' % i)
                  for i, widget in enumerate(self.widgets)]
+        parts = [x if x else '' for x in parts]
         return ''.join(parts)
