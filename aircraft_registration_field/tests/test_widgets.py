@@ -25,3 +25,11 @@ class AircraftRegistrationPrefixWidgetTest(TestCase):
         widget = self.Form().fields["registration"].widget
         decompressed = widget.decompress('EH-JAER')
         self.assertEqual([None, ''], decompressed)
+
+    def test_decompress_empty(self):
+        widget = self.Form().fields["registration"].widget
+        decompressed = widget.decompress('')
+        self.assertEqual([None, ''], decompressed)
+
+    def test_value_from_datadict(self):
+        pass
