@@ -16,6 +16,9 @@ install:
   - pip install -r requirements.txt
   - pip install coveralls
 
+before_script:
+  - psql -c "CREATE DATABASE aircraft_registration_field;" -U postgres
+
 script:
   - coverage run runtest.py
 
