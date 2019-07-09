@@ -20,7 +20,7 @@ before_script:
   - psql -c "CREATE DATABASE aircraft_registration_field;" -U postgres
 
 script:
-  - coverage run runtest.py
+  - coverage run ./runtest.py
 
 after_success:
   coveralls
