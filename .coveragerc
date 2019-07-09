@@ -10,7 +10,7 @@ omit =
     */apps.py
     manage.py
     */__init__.py
-    runtest.py
+    runtests.py
     setup.py
 source = .
 
