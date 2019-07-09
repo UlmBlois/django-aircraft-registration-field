@@ -19,9 +19,9 @@ class AircraftRegistrationPrefixWidgetTest(TestCase):
     def test_decompress(self):
         widget = self.Form().fields["registration"].widget
         decompressed = widget.decompress('F-JAER')
-        self.assertEquals(['F-', 'JAER'], decompressed)
+        self.assertEqual(['F-', 'JAER'], decompressed)
 
     def test_decompress_unknow_prefix(self):
         widget = self.Form().fields["registration"].widget
         decompressed = widget.decompress('EH-JAER')
-        self.assertEquals([None, ''], decompressed)
+        self.assertEqual([None, ''], decompressed)

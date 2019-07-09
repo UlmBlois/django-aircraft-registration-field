@@ -50,7 +50,7 @@ def runtests(test_path='aircraft_registration_field'):
     django.setup()
     warnings.simplefilter('always', DeprecationWarning)
     failures = call_command(
-        'test', test_path, interactive=False, failfast=False, verbosity=2)
+        'test', test_path, interactive=False, failfast=False, verbosity=0)
 
     sys.exit(bool(failures))
 
