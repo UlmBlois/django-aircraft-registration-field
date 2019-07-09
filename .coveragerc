@@ -1,0 +1,23 @@
+[run]
+branch = true
+omit =
+    */tests/*
+    */tests.py
+    */migrations/*
+    */urls.py
+    */settings/*
+    */wsgi.py
+    */apps.py
+    manage.py
+    */__init__.py
+    runtest.py
+    setup.py
+source = .
+
+[report]
+show_missing = true
+exclude_lines =
+    pragma: no cover
+    def __repr__
+    def __str__
+    def __unicode__
