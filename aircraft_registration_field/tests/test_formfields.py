@@ -18,7 +18,3 @@ class AircraftRegistrationPrefixWidgetTest(TestCase):
     def test_validate_invalid(self):
         with self.assertRaises(ValidationError):
             self.field.validate('F-1111')
-
-    def test_empty_value(self):
-        self.assertEqual('', self.field.to_python(''))
-        self.assertEqual('', self.field.to_python(None))
