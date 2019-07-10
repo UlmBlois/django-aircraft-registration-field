@@ -34,7 +34,7 @@ EXTRAS = {
 }
 
 DEPENDENCY_LINKS = [
-    'git+https://github.com/UlmBlois/Aircraft-Registration@master#egg=aircraft_registration-0'
+    'git+https://github.com/UlmBlois/Aircraft-Registration/tarball/master#egg=aircraft_registration-0.1.0'
 ]
 # The rest you shouldn't have to touch too much :)
 # ------------------------------------------------
