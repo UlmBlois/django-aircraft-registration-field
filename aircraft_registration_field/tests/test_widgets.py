@@ -48,3 +48,7 @@ class AircraftRegistrationPrefixWidgetTest(TestCase):
                 {'registration_0': 'F-', 'registration_1': None},
                 {}, 'registration'),
             'F-')
+
+
+class AircraftRegistrationPrefixSelectTest(TestCase):
+    pass

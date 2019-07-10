@@ -13,9 +13,13 @@ class AircraftRegistrationPrefixSelect(Select):
             country = Country(country_code)
             if country:
                 choices.append((prefix, "%s %s" % (country.name, prefix)))
-
+        choices = sorted(choices, key=lambda item: item[1])
+        if initial:
+            country = Country(initial)
+            if country:
+                choices.insert(0, "%s %s" % (country.name, initial))
         super().__init__(
-            choices=sorted(choices, key=lambda item: item[1])
+            choices=choices
         )
 
 
