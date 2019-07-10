@@ -22,7 +22,6 @@ VERSION = '0.1.0'
 
 # What packages are required for this module to be executed?
 REQUIRED = [
-    'aircraft_registration==0.1.0',
     'django>=2.2.2',
     'django-countries>=5.3.3',
     # 'requests', 'maya', 'records',
@@ -33,9 +32,7 @@ EXTRAS = {
     # 'fancy feature': ['django'],
 }
 
-DEPENDENCY_LINKS = [
-    'git+https://github.com/UlmBlois/Aircraft-Registration/tarball/master#egg=aircraft_registration-0.1.0'
-]
+DEPENDENCY_LINKS = []
 # The rest you shouldn't have to touch too much :)
 # ------------------------------------------------
 # Except, perhaps the License and Trove Classifiers!
