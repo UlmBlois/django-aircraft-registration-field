@@ -32,4 +32,19 @@ class AircraftRegistrationPrefixWidgetTest(TestCase):
         self.assertEqual([None, ''], decompressed)
 
     def test_value_from_datadict(self):
-        pass
+        widget = self.Form().fields["registration"].widget
+        self.assertEqual(
+            widget.value_from_datadict(
+                {'registration_0': 'F-', 'registration_1': 'JAER'},
+                {}, 'registration'),
+            'F-JAER')
+        self.assertEqual(
+            widget.value_from_datadict(
+                {'registration_0': None, 'registration_1': 'JAER'},
+                {}, 'registration'),
+            'JAER')
+        self.assertEqual(
+            widget.value_from_datadict(
+                {'registration_0': 'F-', 'registration_1': None},
+                {}, 'registration'),
+            'F-')
