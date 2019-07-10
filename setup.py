@@ -22,7 +22,7 @@ VERSION = '0.1.0'
 
 # What packages are required for this module to be executed?
 REQUIRED = [
-    'aircraft_registration=0.1.0',
+    'aircraft_registration==0.1.0',
     'django>=2.2.2',
     'django-countries>=5.3.3',
     # 'requests', 'maya', 'records',
