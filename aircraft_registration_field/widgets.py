@@ -14,6 +14,7 @@ class AircraftRegistrationPrefixSelect(Select):
             if country:
                 choices.append((prefix, "%s %s" % (country.name, prefix)))
         choices = sorted(choices, key=lambda item: item[1])
+        # TODO imitate django_countries?
         # if initial:
         #     country = Country(initial)
         #     if country:

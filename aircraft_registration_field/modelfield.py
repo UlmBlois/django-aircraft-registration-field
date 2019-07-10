@@ -10,6 +10,7 @@ class AircraftRegistrationField(models.CharField):
     description = _("Aicraft registration number")
 
     def __init__(self, *args, **kwargs):
+        # TODO check registration code max_length
         kwargs.setdefault("max_length", 10)
         super().__init__(*args, **kwargs)
 
